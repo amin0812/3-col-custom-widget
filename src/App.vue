@@ -3,6 +3,12 @@
 
   <div id="widget-content" style="width: 800px; max-width: 100%; margin: 0 auto; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
     <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+      <tr>
+      <td colspan="2" style="text-align: left;">
+        <h2 style="margin: 0 0 5px 0;">{{ formValues.headline }}</h2>
+        <h4 style="margin: 0 0 10px 0; color: #555;">{{ formValues.subheadline }}</h4>
+      </td>
+    </tr>
       <tbody>
         <tr>
           <!-- Loop through columns to create table cells -->
