@@ -2,7 +2,7 @@
   <Vueform :key="updateKey" v-bind="vueform" />
 
   <div id="widget-content" style="width: 800px; max-width: 100%; margin: 0 auto; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
-    <table style="width: 100%; border-collapse: collapse;">
+    <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
       <tbody>
         <tr>
           <!-- Loop through columns to create table cells -->
@@ -12,9 +12,13 @@
               <template v-if="column.image">
                 <div style="text-align: center; padding: 10px;">
                   <img :src="column.image" alt="Image" style="max-width: 100%; height: auto; object-fit: cover;" />
+                  <p v-if="column.text" style="margin: 10px auto; text-align: center; word-wrap: break-word;">
+                {{ column.text }}
+              </p>
                 </div>
               </template>
-              <p v-if="column.text" style="margin: 10px 0; text-align: center;">{{ column.text }}</p>
+              <!-- Ensure text width matches image width -->
+             
               <template v-if="column.button">
                 <a :href="column.buttonLink" style="text-decoration: none;">
                   <button style="display: block; width: 100%; padding: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
@@ -48,6 +52,14 @@ const vueform = ref({
       type: 'static',
       content: 'Custom Widget',
       tag: 'h1'
+    },
+    headline: {
+      type: 'text',
+      placeholder: 'Headline'
+    },
+    subheadline: {
+      type: 'text',
+      placeholder: 'Subheadline'
     },
     numColumns: {
       type: 'select',
@@ -127,7 +139,11 @@ const columnStyle = computed(() => {
     width: `${columnWidth}%`,
     boxSizing: 'border-box',
     padding: '10px',
-    textAlign: 'center'
+    textAlign: 'center',
+    overflow: 'hidden', // Ensures content stays within the boundaries
+    wordWrap: 'break-word', // Ensures long words wrap within the column
+    verticalAlign: 'top', // Align content to the top of each column
+    height: '300px', // Set a fixed height for all columns (adjust as needed)
   };
 });
 
