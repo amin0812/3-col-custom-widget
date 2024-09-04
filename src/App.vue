@@ -7,8 +7,7 @@
       <tbody>
         <tr>
           <td style="text-align: left;">
-            <h2 class="h3-purple"
-              style="font-size: 1.5em; color:#6D5BA3;text-align: left; font-family: 'Times New Roman', Times, serif;">
+            <h2 class="h3-purple" style="color:#6D5BA3;">
               {{ formValues.headline }}
             </h2>
             <h4 class="h3-black"
@@ -25,7 +24,7 @@
               <template v-if="column.image">
                 <div style="text-align: center; padding: 10px;">
                   <img :src="column.image" alt="Image" style="max-width: 100%; height: auto; object-fit: cover;" />
-                  <p v-if="column.text"
+                  <p v-if="column.text" class="regular-text"
                     style="margin: 10px auto; text-align: justify; word-wrap: break-word; width: 100%;">
                     {{ column.text }}
                   </p>
