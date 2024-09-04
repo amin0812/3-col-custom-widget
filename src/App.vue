@@ -6,7 +6,7 @@
     <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
       <tbody>
         <tr>
-          <td style="text-align: left;">
+          <td style="text-align: left; padding: 10px 40px;">
             <h2 class="h3-purple" style="color:#6D5BA3;">
               {{ formValues.headline }}
             </h2>
@@ -25,7 +25,7 @@
                 <div style="text-align: center; padding: 10px;">
                   <img :src="column.image" alt="Image" style="max-width: 100%; height: auto; object-fit: cover;" />
                   <p v-if="column.text" class="regular-text"
-                    style="margin: 10px auto; text-align: justify; word-wrap: break-word; width: 100%;">
+                    style="margin: 10px auto; text-align: left; word-wrap: break-word; width: 100%;">
                     {{ column.text }}
                   </p>
                 </div>
