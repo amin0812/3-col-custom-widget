@@ -2,7 +2,7 @@
   <Vueform :key="updateKey" v-bind="vueform" />
 
   <div id="widget-content"
-    style="width: 800px; max-width: 100%; margin: 0 auto; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+    style="max-width: 100%; margin: 0 auto; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
     <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
       <tbody>
         <tr>
