@@ -6,12 +6,12 @@
     <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
       <tbody>
         <tr>
-          <td style="text-align: left; padding: 10px 40px;">
+          <td class="regular-text" style="text-align: left; padding: 10px 40px;">
             <h2 class="h3-purple" style="color:#6D5BA3;">
               {{ formValues.headline }}
             </h2>
             <h4 class="h3-black"
-              style="font-size: 1.5em; color:#000;text-align: left; font-family: 'Times New Roman', Times, serif;">
+              style="color:#000;text-align: left; ">
               {{ formValues.subheadline }}
             </h4>
           </td>
