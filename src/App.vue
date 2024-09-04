@@ -10,10 +10,9 @@
             <h2 class="h3-purple" style="color:#6D5BA3;">
               {{ formValues.headline }}
             </h2>
-            <h4 class="h3-black"
-              style="color:#000;text-align: left; ">
+            <h2 class="h4-headline" style="color:#181E20;text-align: left; ">
               {{ formValues.subheadline }}
-            </h4>
+            </h2>
           </td>
         </tr>
         <tr>
@@ -25,7 +24,7 @@
                 <div style="text-align: center; padding: 10px;">
                   <img :src="column.image" alt="Image" style="max-width: 100%; height: auto; object-fit: cover;" />
                   <p v-if="column.text" class="regular-text"
-                    style="margin: 10px auto; text-align: left; word-wrap: break-word; width: 100%;">
+                    style="color:#2E393D;font-family:DWS Sans TT, Calibri, Helvetica, Sans-serif;font-size:14px; line-height:18px;font-style:normal;font-weight:400; margin-top:5px;margin-bottom:15px; width: 100%;">
                     {{ column.text }}
                   </p>
                 </div>
