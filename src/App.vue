@@ -24,7 +24,7 @@
                 <div style="text-align: center; padding: 10px;">
                   <img :src="column.image" alt="Image" style="max-width: 100%; height: auto; object-fit: cover;" />
                   <p v-if="column.text" class="regular-text"
-                    style="color:#2E393D;font-family:DWS Sans TT, Calibri, Helvetica, Sans-serif;font-size:14px; line-height:18px;font-style:normal;font-weight:400; margin-top:5px;margin-bottom:15px; width: 100%;">
+                    style="color:#2E393D;font-family:DWS Sans TT, Calibri, Helvetica, Sans-serif;font-size:14px; line-height:18px;font-style:normal;font-weight:400; margin-top:5px;margin-bottom:15px; width: 100%; text-align: left;">
                     {{ column.text }}
                   </p>
                 </div>
@@ -158,7 +158,9 @@ const columns = computed(() => {
 
 const columnStyle = computed(() => {
   const columnCount = formValues.value.numColumns || 1;
-  const totalWidth = 100; // Total width of the container in %
+  const totalWidth = 600; // Total width of the container in px
+  const padding = 10; // Padding on the sides of the container
+  const spacing = 6; // Spacing between columns
 
   // Calculate the width for each column
   const columnWidth = totalWidth / columnCount; // Width for each column
